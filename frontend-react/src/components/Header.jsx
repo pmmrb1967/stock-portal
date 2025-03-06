@@ -17,12 +17,16 @@ const Header = () => {
   return (
     <>
       <nav className='navbar container pt-3 pb-3 align-items-start'>
-        <Link className='navbar-brand text-light' to="/">Stock Prediction Portal</Link>
+        <Link className='navbar-brand text-dark' to="/">Stock Prediction Portal</Link>
 
         <div>
-          {isLoggedIn ? (
+        {isLoggedIn ? (
+            <>
+            <Button text='Dashboard' class="btn-info" url="/dashboard" />
+            &nbsp;
             <button className='btn btn-danger' onClick={handleLogout}>Logout</button>
-          ) : (
+            </>
+          ) : (  
             <>
             <Button text='Login' class="btn-outline-info" url="/login" />
             &nbsp;
